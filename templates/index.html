@@ -19,13 +19,10 @@
     <meta property="og:image" content="../static/logo.png" />
 
     <!-- css, script insert -->
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js"></script>
-
-    <!-- swiperJS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- swiperJS -->
+        <link rel="stylesheet" href="../static/main.css">
 </head>
 
 <body>
@@ -51,96 +48,96 @@
                     <li>특이사항은 slack으로! (히스토리 파악 용이)</li>
                 </ul>
             </div>
-            <div class="swipeCards">
-                <!-- GET 받아올 곳 -->
-                <div class="container">
-                    <div class="memberCards" id="memberCards">
-                        <a class="circle">
-                            <img class="circle" src="../static/img1.png">
-                        </a>
+            <div class="Cards">
+                <!-- container 하나로 변경, membercards에 swiper-slide class동시부여, swiper 계층구조유지를 위해서 container > wrapper > slide로 감싸주었음 -->
+                <div class="swiper container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide memberCards" id="memberCards">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
 
-                        <p class="infoTitle">이름</p>
-                        <p class="infoText">피카추</p>
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
 
-                        <p class="infoTitle">자신의 장점</p>
-                        <p class="infoText">몸통 박치기</p>
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
 
-                        <p class="infoTitle">협업 스타일</p>
-                        <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
 
-                        <p class="infoTitle">블로그 바로가기</p>
-                        <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
-                        <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
-                        </p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="memberCards" id="memberCards">
-                        <a class="circle">
-                            <img class="circle" src="../static/img1.png">
-                        </a>
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
 
-                        <p class="infoTitle">이름</p>
-                        <p class="infoText">피카추</p>
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
 
-                        <p class="infoTitle">자신의 장점</p>
-                        <p class="infoText">몸통 박치기</p>
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
 
-                        <p class="infoTitle">협업 스타일</p>
-                        <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
 
-                        <p class="infoTitle">블로그 바로가기</p>
-                        <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
-                        <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
-                        </p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="memberCards" id="memberCards">
-                        <a class="circle">
-                            <img class="circle" src="../static/img1.png">
-                        </a>
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
 
-                        <p class="infoTitle">이름</p>
-                        <p class="infoText">피카추</p>
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
 
-                        <p class="infoTitle">자신의 장점</p>
-                        <p class="infoText">몸통 박치기</p>
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
 
-                        <p class="infoTitle">협업 스타일</p>
-                        <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
 
-                        <p class="infoTitle">블로그 바로가기</p>
-                        <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
-                        <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
-                        </p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="memberCards" id="memberCards">
-                        <a class="circle">
-                            <img class="circle" src="../static/img1.png">
-                        </a>
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
 
-                        <p class="infoTitle">이름</p>
-                        <p class="infoText">피카추</p>
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
 
-                        <p class="infoTitle">자신의 장점</p>
-                        <p class="infoText">몸통 박치기</p>
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
 
-                        <p class="infoTitle">협업 스타일</p>
-                        <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
 
-                        <p class="infoTitle">블로그 바로가기</p>
-                        <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
-                        <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
-                        </p>
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 내 정보 등록하기 모달창 -->
+        <!-- 내 정보 등록하기 모달창 display:none으로 가려놨습니다 button이 slide 뒤로 이동된 부분 수정필요-->
         <div class="myPost">
             <img src="../static/logo.png" alt="#" class="logo">
             <div class="name_give">
@@ -162,7 +159,7 @@
                 <button class="btnModal" onclick="closePost()">취소하기</button>
                 <button class="btnModal" onclick="savePost()">등록하기</button>
             </div>
-           
+
         </div>
         <button class="openModalBtn" onclick="openModal()">나를 소개합니다</button>
         </div>
@@ -171,5 +168,5 @@
 
 
 </body>
-
+<script src="../static/main.js"></script>
 </html>
