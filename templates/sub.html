@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>team 무계획</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="무계획" />
+    <meta property="og:description" content="완벽한 계획은 무계획!" />
+    <meta property="og:image" content="../static/logo.png" />
+
+    <!-- css, script insert -->
+    <!-- css 파일 static 폴더로 이동 -->
+    <link rel="stylesheet" href="../static/sub.css">
+
+    <script>
+        $(document).ready(function () {
+            show_team();
+        });
+
+        function show_team() {
+            fetch('/sub/team').then((res) => res.json()).then((data) => {
+                let rows = data['result']
+                $('#team-list').empty()
+                rows.forEach((a) => {
+                    let name = a['name']
+                    let best = a['best']
+                    let style = a['style']
+                    let blog = a['blog']
+                    let image = a['image']
+                    let temp_html = `<div class="memberCards" id="memberCards">
+                                <a class="circle">
+                                    <img class="circle" src="${image}">
+                                </a>
+
+                                <p class="infoTitle">이름</p>
+                                <p class="infoText">${name}</p>
+
+                                <p class="infoTitle">자신의 장점</p>
+                                <p class="infoText">${best}</p>
+
+                                <p class="infoTitle">협업 스타일</p>
+                                <p class="infoText">${style}</p>
+
+                                <p class="infoTitle">블로그 바로가기</p>
+                                <p class="infoText" onclick="window.open('${blog}')">${blog}
+                                </p>
+                            </div>`
+                    $('#team-list').append(temp_html)
+                });
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="header" onclick="window.open('/')">
+            <img src="../static/logo.png" alt="#" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <div class="intro">
+                <h1>우리는 모두 P!</h1>
+                <p>P(인식형)무계획들이 모여서 만드는 자기소개 웹사이트에 오신걸 환영합니다!</p>
+            </div>
+            <div class="container" id="team-list">
+                <div class="memberCards" id="memberCards">
+                    <a class="circle">
+                        <img class="circle" src="/sub">
+                    </a>
+
+                    <p class="infoTitle">이름</p>
+                    <p class="infoText">피카추</p>
+
+                    <p class="infoTitle">자신의 장점</p>
+                    <p class="infoText">몸통 박치기</p>
+
+                    <p class="infoTitle">협업 스타일</p>
+                    <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                    <p class="infoTitle">블로그 바로가기</p>
+                    <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                    <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
+                    </p>
+                </div>
+                <div class="memberCards" id="memberCards">
+                    <a class="circle">
+                        <img class="circle" src="/sub">
+                    </a>
+
+                    <p class="infoTitle">이름</p>
+                    <p class="infoText">피카추</p>
+
+                    <p class="infoTitle">자신의 장점</p>
+                    <p class="infoText">몸통 박치기</p>
+
+                    <p class="infoTitle">협업 스타일</p>
+                    <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                    <p class="infoTitle">블로그 바로가기</p>
+                    <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                    <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">https://pokemonkorea.co.kr/
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
