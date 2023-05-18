@@ -1,6 +1,6 @@
 * {
-    box-sizing:border-box
-  }
+    box-sizing: border-box
+}
 
 header {
     margin: 70px;
@@ -91,26 +91,29 @@ ul {
 }
 
 /* 정보 등록하기 모달창 */
-.myPost {
+.main-card {
     display: none;
-    flex-direction: column; /* input textarea 가운데 정렬 */
+    flex-direction: column;
+    /* input textarea 가운데 정렬 */
     justify-content: center;
     align-items: center;
-    position: absolute; /*  요소를 문서의 특정 위치에 절대적으로 배치 */
+    position: absolute;
+    /*  요소를 문서의 특정 위치에 절대적으로 배치 */
     top: 350px;
     left: 10%;
     right: 10%;
     border-radius: 65px;
-    background: #EBDFC9;    
+    background: #EBDFC9;
     color: #2E2E2E;
     padding: 30px;
     margin: 0 20% 0% 20%;
     border: 5px solid #9E312F;
     box-shadow: 3px 3px 8px #2E2E2E;
-    z-index: 9999; /* 원하는 숫자를 지정하여 다른 요소들보다 큰 값으로 설정 */
+    z-index: 9999;
+    /* 원하는 숫자를 지정하여 다른 요소들보다 큰 값으로 설정 */
 }
 
-.myPost img {
+.main-card img {
     width: 200px;
     padding: 20px;
 }
@@ -135,25 +138,30 @@ textarea {
     text-align: center;
 }
 
-.inputTitle {
+.modal-input {
     width: 400px;
     height: 100px;
     padding: 1px;
     margin-bottom: 50px;
     background-color: #EBDFC9;
     color: #2E2E2E;
-    border: none; /* 테두리 제거 */
-    border-bottom: 1px solid #2E2E2E; /* 밑줄 추가 */
-    resize: none; /* 크기 조정 비활성화 */
-    outline: none; /* 포커스 시 아웃라인 제거 (선택사항) */
+    border: none;
+    /* 테두리 제거 */
+    border-bottom: 1px solid #2E2E2E;
+    /* 밑줄 추가 */
+    resize: none;
+    /* 크기 조정 비활성화 */
+    outline: none;
+    /* 포커스 시 아웃라인 제거 (선택사항) */
     font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
-    font-size: 16px; 
+    font-size: 16px;
 
 }
 
 textarea::placeholder {
-    text-align: center; /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
     font-size: 1.3em;
 }
 
@@ -172,8 +180,14 @@ button {
     border-radius: 50px;
 }
 
-.btnModal {
+.modal-btn {
     float: left;
+    cursor: pointer;
+}
+
+.modal-btn-enroll {
+    float: left;
+    cursor: pointer;
 }
 
 .openModalBtn {
@@ -185,11 +199,14 @@ button {
     bottom: 50px;
     transform: translate(-50%, -50%);
     z-index: 8888;
+    cursor: pointer;
 }
+
 .swiper-wrapper {
     width: 1200px;
-  }
-  .swiper-slide {
+}
+
+.swiper-slide {
     width: 580px;
     height: 900px;
-  }
+}

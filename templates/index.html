@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>team 무계획</title>
-    <!-- sub page link -->
-    <li><a href="./sub.html">SUB1</a></li>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- swiperJS -->
-        <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="../static/main.css">
 </head>
 
 <body>
@@ -137,31 +135,38 @@
             </div>
         </div>
 
-        <!-- 내 정보 등록하기 모달창 display:none으로 가려놨습니다 button이 slide 뒤로 이동된 부분 수정필요 1231232-->
-        <div class="myPost">
+        <!-- 내 정보 등록하기 모달창 display:none으로 가려놨습니다-->
+        <div id="popup01" class="main-card">
             <img src="../static/logo.png" alt="#" class="logo">
-            <div class="name_give">
-                <textarea class="inputTitle" id="myName" placeholder="이름(혹은 닉네임)을 적어주세요"></textarea>
-            </div>
-            <div class="strength_give">
-                <textarea class="inputTitle" id="myStrengh" placeholder="자신의 장점을 적어주세요"></textarea>
-            </div>
-            <div class="style_give">
-                <textarea class="inputTitle" id="myStyle" placeholder="협업 스타일은 어떤가요?"></textarea>
-            </div>
-            <div class="blog_give">
-                <textarea class="inputTitle" id="myBlog" placeholder="블로그 주소도 알려주세요"></textarea>
-            </div>
-            <div class="img_give">
-                <input type="text" class="inputTitle" id="myImg" placeholder="나를 표현하는 이미지 url을 넣어주세요" />
+            <!-- <div class="close">close</div> -->
+            <div>
+                이름
+                <input type="text" class="modal-input" id="noplan" />
             </div>
             <div>
-                <button class="btnModal" onclick="closePost()">취소하기</button>
-                <button class="btnModal" onclick="savePost()">등록하기</button>
+                자신의 장점
+                <input type="text" class="modal-input" id="noplan" />
             </div>
+            <div>
+                협업 스타일
+                <input type="text" class="modal-input" id="noplan" />
+            </div>
+            <div>
+                블로그
+                <input type="text" class="modal-input" id="noplan" />
+            </div>
+            <div>
+                img link
+                <input type="text" class="modal-input" id="noplan" />
+            </div>
+            <button class="modal-btn" id="modal-btn">취소하기</button>
+            <button class="modal-btn-enroll" onclick="save_noplan()">
+                등록하기
+            </button>
+        </div>
 
         </div>
-        <button class="openModalBtn" onclick="openModal()">나를 소개합니다</button>
+        <button class="openModalBtn" id="openModalBtn">나를 소개합니다</button>
         </div>
 
     </main>
@@ -169,4 +174,5 @@
 
 </body>
 <script src="../static/main.js"></script>
+
 </html>
