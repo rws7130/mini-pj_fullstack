@@ -29,6 +29,11 @@ window.addEventListener("keyup", e => {
   }
 })
 
+function detailPage() {
+  // 각 팀원 카드 누르면 디테일 페이지로 
+  location.href = "../static/sub.html";
+}
+
 function save_info() {
   let name = $('#noplan').val()
   let best = $('#best').val()
@@ -59,7 +64,7 @@ function show_info() {
       let style = a['style']
       let blog = a['blog']
       let image = a['image']
-      let temp_html = `<div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
+      let temp_html = `<div class="swiper-slide memberCards" id="memberCards" onclick="detailPage()">
                           <a class="circle">
                               <img class="circle" src="${image}">
                           </a>
