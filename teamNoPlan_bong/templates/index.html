@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>team 무계획</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="무계획" />
+    <meta property="og:description" content="완벽한 계획은 무계획!" />
+    <meta property="og:image" content="../static/logo.png" />
+
+    <!-- css, script insert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- swiperJS -->
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="header">
+            <img src="../static/logo.png" alt="#" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <div class="intro">
+                <h1>우리는 모두 P!!</h1>
+                <p>P(인식형)무계획들이 모여서 만드는 자기소개 웹사이트에 오신걸 환영합니다!</p>
+            </div>
+            <div class="intro2">
+                <h1>우리 팀의 약속</h1>
+                <ul>
+                    <li>9시 반 인사 & 간단 회의</li>
+                    <li>2시에 생존신고 : 진척도, 문제점 공유</li>
+                    <li>Git Merge는 매일 저녁 8시 30분에!</li>
+                    <li>특이사항은 slack으로! (히스토리 파악 용이)</li>
+                </ul>
+            </div>
+            <div class="Cards">
+                <!-- container 하나로 변경, membercards에 swiper-slide class동시부여, swiper 계층구조유지를 위해서 container > wrapper > slide로 감싸주었음 -->
+                <div class="swiper container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
+
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
+
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
+
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
+
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
+
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
+
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
+
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
+
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
+
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                        <div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
+                            <a class="circle">
+                                <img class="circle" src="../static/img1.png">
+                            </a>
+
+                            <p class="infoTitle">이름</p>
+                            <p class="infoText">피카추</p>
+
+                            <p class="infoTitle">자신의 장점</p>
+                            <p class="infoText">몸통 박치기</p>
+
+                            <p class="infoTitle">협업 스타일</p>
+                            <p class="infoText">꼬부기가 물을 쏘면 나는 전기를 쏘지</p>
+
+                            <p class="infoTitle">블로그 바로가기</p>
+                            <!-- 새창으로 이동 onclick="window.open('<링크주소>');" -->
+                            <p class="infoText" onclick="window.open('//pokemonkorea.co.kr/')">
+                                https://pokemonkorea.co.kr/
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 내 정보 등록하기 모달창 display:none으로 가려놨습니다-->
+        <div id="popup01" class="main-card">
+            <img src="../static/logo.png" alt="#" class="logo">
+            <!-- <div class="close">close</div> -->
+            <div>
+                이름
+                <input type="text" class="modal-input infoTitle" id="noplan" />
+            </div>
+            <div>
+                자신의 장점
+                <input type="text" class="modal-input infoTitle" id="best" />
+            </div>
+            <div>
+                협업 스타일
+                <input type="text" class="modal-input infoTitle" id="style" />
+            </div>
+            <div>
+                블로그
+                <input type="text" class="modal-input infoTitle" id="blog" />
+            </div>
+            <div>
+                img link
+                <input type="text" class="modal-input infoTitle" id="image" />
+            </div>
+            <button class="modal-btn" id="modal-btn">취소하기</button>
+            <button class="modal-btn-enroll" onclick="save_info()">
+                등록하기
+            </button>
+        </div>
+
+        </div>
+        <button class="openModalBtn" id="openModalBtn">나를 소개합니다</button>
+        </div>
+
+    </main>
+
+
+</body>
+<script src="../static/main.js"></script>
+
+</html>
