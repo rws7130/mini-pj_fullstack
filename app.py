@@ -4,8 +4,9 @@ app = Flask(__name__)
 from pymongo import MongoClient
 import certifi
 ca = certifi.where()
-client = MongoClient('mongodb+srv://sparta:test@cluster0.vrxfzqx.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
+client = MongoClient('mongodb+srv://sparta:test@cluster0.hjivimn.mongodb.net/?retryWrites=true&w=majority', tlsCAFile=ca)
 db = client.dbsparta
+
 
 @app.route('/')
 def home():
@@ -13,7 +14,7 @@ def home():
 
 @app.route('/sub')
 def mypage():  
-   return 'This is My Page!'
+   return render_template('sub.html')
 
 @app.route("/infom", methods=['POST'])
 def infom_post():

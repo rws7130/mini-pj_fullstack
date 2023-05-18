@@ -34,7 +34,7 @@ function save_info() {
   let best = $('#best').val()
   let style = $('#style').val()
   let blog = $('#blog').val()
-  let image = $('#nimage').val()
+  let image = $('#image').val()
 
   let formData = new FormData();
   formData.append("name_give", name)
@@ -50,7 +50,7 @@ function save_info() {
 }
 
 function show_info() {
-  fetch ('/info').then((res) => res.json()).then((data) => {
+  fetch('/infom').then((res) => res.json()).then((data) => {
     let rows = data['result']
     $('.swiper-wrapper').empty()
     rows.forEach((a) => {
@@ -60,25 +60,25 @@ function show_info() {
       let blog = a['blog']
       let image = a['image']
       let temp_html = `<div class="swiper-slide memberCards" id="memberCards" onclick="window.open('sub.html')">
-      <a class="circle">
-          <img class="circle" src="${image}">
-      </a>
+                          <a class="circle">
+                              <img class="circle" src="${image}">
+                          </a>
 
-      <p class="infoTitle">이름</p>
-      <p class="infoText">${name}</p>
+                          <p class="infoTitle">이름</p>
+                          <p class="infoText">${name}</p>
 
-      <p class="infoTitle">자신의 장점</p>
-      <p class="infoText">${best}</p>
+                          <p class="infoTitle">자신의 장점</p>
+                          <p class="infoText">${best}</p>
 
-      <p class="infoTitle">협업 스타일</p>
-      <p class="infoText">${style}</p>
+                          <p class="infoTitle">협업 스타일</p>
+                          <p class="infoText">${style}</p>
 
-      <p class="infoTitle">블로그 바로가기</p>
-      <p class="infoText" onclick="window.open('${blog}')">
-      ${blog}
-      </p>
-  </div>`
-  $('.swiper-wrapper').append(temp_html)
+                          <p class="infoTitle">블로그 바로가기</p>
+                          <p class="infoText" onclick="window.open('${blog}')">
+                          ${blog}
+                          </p>
+                      </div>`
+      $('.swiper-wrapper').append(temp_html)
     })
   })
 }
