@@ -19,14 +19,72 @@
     <meta property="og:image" content="../static/logo.png" />
 
     <!-- css, script insert -->
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js"></script>
-
-    <!-- swiperJS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">  
+    <!--  flask의 특징으로 main.css로 작성해야함  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
+    <script src="./main.js"></script>
+    <!-- swiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!--  -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script>
+      $(document).ready(function ($) {
+        show_noplan();
+        $(".openPopup").on("click", function (event) {
+          //팝업오픈 버튼 누르면
+          $("#popup01").show(); //팝업 오픈
+          $("body").append('<div class="backon"></div>'); //뒷배경 생성
+        });
+  
+        $("body").on("click", function (event) {
+          if (
+            event.target.className == "modal-btn" ||
+            event.target.className == "backon" ||
+            event.target.className == "modal-btn-enroll"
+          ) {
+            $("#popup01").hide(); //close버튼 이거나 뒷배경 클릭시 팝업 삭제
+            $(".backon").hide();
+            $(".modal-btn-enroll").hide();
+          }
+        });
+      });
+  
+      // $(document).ready(function () {
+      //   show_bucket();
+      // });
+      function show_noplan() {
+        fetch("/noplan")
+          .then((res) => res.json())
+          .then((data) => {
+            let rows = data["result"];
+            $("#noplan-list").empty();
+            rows.forEach((a) => {
+              let noplan = a["noplan"];
+              let temp_html = ` 
+                  <li>
+                       <h2>${noplan}</h2>
+                  </li>
+                  `;
+              $("#noplan-list").append(temp_html);
+            });
+          });
+      }
+      function save_noplan() {
+        let noplan = $("#noplan").val();
+  
+        let formData = new FormData();
+        formData.append("noplan_give", noplan);
+  
+        fetch("/noplan", { method: "POST", body: formData })
+          .then((response) => response.json())
+          .then((data) => {
+            alert(data["msg"]);
+            window.location.reload();
+          });
+      }
+    </script>
+
 
 <body>
     <!-- 헤더 -->
@@ -160,7 +218,7 @@
             </div>
             <div>
                 <button class="btnModal" onclick="closePost()">취소하기</button>
-                <button class="btnModal" onclick="savePost()">등록하기</button>
+                <button class="btnModal" onclick="save_noplan()">등록하기</button>
             </div>
            
         </div>
